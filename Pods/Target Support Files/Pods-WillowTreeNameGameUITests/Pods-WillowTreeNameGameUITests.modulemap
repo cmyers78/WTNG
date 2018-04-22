@@ -1,0 +1,6 @@
+framework module Pods_WillowTreeNameGameUITests {
+  umbrella header "Pods-WillowTreeNameGameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
