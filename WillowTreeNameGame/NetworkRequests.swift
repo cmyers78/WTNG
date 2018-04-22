@@ -25,11 +25,18 @@ class NetworkRequests {
                 if error != nil {
                     // return failure(error) enum
                 }
-                if let namesDict = self.parseJSON(from: data) {
+                if let namesJSONArray = self.parseJSON(from: data) {
+                    let namesData = namesJSONArray.map { data in
+                        NamesDataModel(jsonArray: [data])
+                    }
+                    print("namesDataCount is: \(namesData.count)")
+                    print("=====================================")
+                    NamesDataStore().saveNamesData(withName: namesData)
 
                     DispatchQueue.main.async {
-                        print("Names Data as JSONDict")
-                        print(namesDict)
+                        print("async call....")
+                        let namesStuff = NamesDataStore().getNamesData()
+                        print("Count is: \(namesStuff.count)")
                     }
                 }
             }

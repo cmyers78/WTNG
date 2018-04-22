@@ -14,7 +14,6 @@
 		C61B40C2208CDBFB00AD03D9 /* NameGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C1208CDBFB00AD03D9 /* NameGameViewController.swift */; };
 		C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C3208CDC0700AD03D9 /* FaceButton.swift */; };
 		C61B40C6208CDC3700AD03D9 /* NameGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C5208CDC3700AD03D9 /* NameGame.swift */; };
-		C61B40C8208CDD5400AD03D9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C61B40C7208CDD5400AD03D9 /* Info.plist */; };
 		C61B40CF208CE0AA00AD03D9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */; };
 		C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */; };
 		C681216E208A3B9C00DC7B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681216D208A3B9C00DC7B3F /* AppDelegate.swift */; };
@@ -22,6 +21,8 @@
 		C6812178208A3B9D00DC7B3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6812176208A3B9D00DC7B3F /* LaunchScreen.storyboard */; };
 		C6812183208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6812182208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift */; };
 		C681218E208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */; };
+		C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */; };
+		C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		C6812189208A3B9E00DC7B3F /* WillowTreeNameGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillowTreeNameGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillowTreeNameGameUITests.swift; sourceTree = "<group>"; };
 		C681218F208A3B9E00DC7B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataModel.swift; sourceTree = "<group>"; };
+		C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataStore.swift; sourceTree = "<group>"; };
 		CBE77A99C3214E0CA11F9DA2 /* Pods_WillowTreeNameGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B218F8A997F8FD9426FB80 /* Pods-WillowTreeNameGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillowTreeNameGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WillowTreeNameGame/Pods-WillowTreeNameGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F16130CC1166161997A4662E /* Pods_WillowTreeNameGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +198,8 @@
 				C61B40C7208CDD5400AD03D9 /* Info.plist */,
 				C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */,
 				C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */,
+				C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */,
+				C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */,
 			);
 			path = WillowTreeNameGame;
 			sourceTree = "<group>";
@@ -326,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C61B40C8208CDD5400AD03D9 /* Info.plist in Resources */,
 				C61B40C0208CDBF000AD03D9 /* Main.storyboard in Resources */,
 				C6812178208A3B9D00DC7B3F /* LaunchScreen.storyboard in Resources */,
 				C6812175208A3B9D00DC7B3F /* Assets.xcassets in Resources */,
@@ -473,9 +477,11 @@
 			files = (
 				C61B40C6208CDC3700AD03D9 /* NameGame.swift in Sources */,
 				C681216E208A3B9C00DC7B3F /* AppDelegate.swift in Sources */,
+				C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */,
 				C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */,
 				C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */,
 				C61B40C2208CDBFB00AD03D9 /* NameGameViewController.swift in Sources */,
+				C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */,
 				C61B40CF208CE0AA00AD03D9 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,7 +659,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -669,7 +678,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,7 +698,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -704,7 +720,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -721,7 +741,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -738,7 +762,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYW89PFS48;
 				INFOPLIST_FILE = WillowTreeNameGameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
