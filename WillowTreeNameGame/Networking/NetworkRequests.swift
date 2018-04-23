@@ -17,7 +17,7 @@ class NetworkRequests {
     
     typealias JSONDictionary = [String : AnyObject]
     typealias JSONArray = [JSONDictionary]
-    
+    let opQueue = OperationQueue.main
     func loadNamesFromNetwork() {
         if let url = URL(string: AppConstants.namesURL) {
             let task = URLSession.shared.dataTask(with: url) {
@@ -29,14 +29,11 @@ class NetworkRequests {
                     let namesData = namesJSONArray.map { data in
                         NamesDataModel(jsonArray: [data])
                     }
-                    print("namesDataCount is: \(namesData.count)")
-                    print("=====================================")
-                    NamesDataStore().saveNamesData(withName: namesData)
-
-                    DispatchQueue.main.async {
+                    self.opQueue.maxConcurrentOperationCount = 10
+                    self.opQueue.addOperation {
                         print("async call....")
-                        let namesStuff = NamesDataStore().getNamesData()
-                        print("Count is: \(namesStuff.count)")
+                        NamesDataStore().saveNamesData(withName: namesData)
+                        print(NamesDataStore().getNamesData().count)
                     }
                 }
             }

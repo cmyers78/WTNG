@@ -24,17 +24,27 @@ extension NamesDataModel {
     convenience init(jsonArray : JSONArray) {
         self.init()
         for item in jsonArray {
-            guard let id = item["id"] as? String, let firstName = item["firstName"] as? String, let lastName = item["lastName"] as? String,
-                let jobTitle = item["jobTitle"] as? String else { return }
+            if let id = item["id"] as? String {
+                self.id = id
+            }
             
-            guard let headShotDict = item["headshot"] as? JSONDictionary else { return }
-            guard let headShotURL = headShotDict["url"] as? String else { return }
+            if let firstName = item["firstName"] as? String {
+                self.firstName = firstName
+            }
             
-            self.id = id
-            self.firstName = firstName
-            self.lastName = lastName
-            self.jobTitle = jobTitle
-            self.headShotURL = "http:" + headShotURL
+            if let lastName = item["lastName"] as? String {
+                self.lastName = lastName
+            }
+            
+            if let headShotDict = item["headshot"] as? JSONDictionary {
+                if let headShotURL = headShotDict["url"] as? String {
+                    self.headShotURL = "http:" + headShotURL
+                }
+            }
+
+            if let jobTitle = item["jobTitle"] as? String {
+                self.jobTitle = jobTitle
+            }
         }
     }
 }

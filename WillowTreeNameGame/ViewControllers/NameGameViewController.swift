@@ -16,60 +16,52 @@ class NameGameViewController: UIViewController {
     @IBOutlet weak var innerStackView2: UIStackView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var imageButtons: [FaceButton]!
-
+    
+    let nGame = NameGame()
+    var correctAnswer = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let orientation: UIDeviceOrientation = self.view.frame.size.height > self.view.frame.size.width ? .portrait : .landscapeLeft
         configureSubviews(orientation)
-        let firstData = NamesDataStore().returnNameDataAtIndex(0)
-        configureFaces(from: firstData)
-//
-//        print(firstData.headShotURL)
-//
-//        let dataInfo = NamesDataStore().returnNameDataAtIndex(4)
-//        guard let dataURLString = dataInfo.headShotURL else { return }
-//        print(dataURLString)
-//        print()
-//
-//        print("That was data url string")
-//        guard let urlData = URL(string: firstData.headShotURL!) else { return }
-//
-//        let datum = try! Data(contentsOf: urlData)
-//        let imagTest = UIImage(data: datum)
-//
-//        // This works
-//        let url = URL(string: "http://images.ctfassets.net/3cttzl4i3k1h/3SQLIq0Y36oYyaiwCSwOY8/a65ae6620c8041b2773c1915156261d7/headshot_ben_frye.jpg")
-//        let data = try! Data(contentsOf: url!)
-//        let img = UIImage(data: data)
-//        let btn = imageButtons[3]
-//        btn.setImage(img, for: .normal)
-//        btn.backgroundColor = .red
-//        print(btn.currentImage)
         
+        print(imageButtons)
+        let gameData = nGame.generateNamesArray()
+        configureFaces(from: gameData.selectedNamesArray)
+        print(gameData.selectedNamesArray)
+        correctAnswer = gameData.correctAnswer
+        print(correctAnswer)
         
-//        for button in imageButtons {
-//            button.setImage(img, for: .normal)
-//            button.layer.borderWidth = 1.5
-//        }
-//
-//        let btn4 = imageButtons[4]
-//        btn4.setImage(imagTest, for: .normal)
+        print(gameData.selectedNamesArray[correctAnswer].firstName)
+        print(gameData.selectedNamesArray[correctAnswer].headShotURL)
+        
     }
 
     @IBAction func faceTapped(_ button: FaceButton) {
         print("Button Tapped")
         print(button.tag)
+        if button.tag == correctAnswer {
+            print("Correct")
+        } else {
+            print("Wrong")
+        }
     }
     
-    func configureFaces(from model : NamesDataModel) {
-        guard let imageString = model.headShotURL else { return }
-        for button in imageButtons {
-            button.convertURLToImage(urlString: imageString) { image in
-                button.setImage(image, for: .normal)
+    func configureFaces(from arrayModel : [NamesDataModel]) {
+        for (idx, button) in imageButtons.enumerated() {
+            if let imageString = arrayModel[idx].headShotURL {
+                button.convertURLToImage(urlString: imageString ) { image in
+                    button.imageView?.contentMode = .scaleAspectFit
+                    button.setImage(image, for: .normal)
+                }
             }
+            button.layer.borderWidth = 2.0
+            button.layer.borderColor = UIColor(red: 0.37, green: 0.73, blue: 0.70, alpha: 1.0).cgColor
         }
-        
     }
 
     func configureSubviews(_ orientation: UIDeviceOrientation) {

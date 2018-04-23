@@ -51,7 +51,6 @@ extension UIButton {
             DispatchQueue.main.async {
                 completion(image)
             }
-           
         }
     }
 }

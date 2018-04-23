@@ -71,12 +71,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FGv-0C-ewu" secondAttribute="height" multiplier="1:1" id="aBx-Yy-25R"/>
                                                 </constraints>
-                                                <state key="normal" title="Person 1" backgroundImage="button:FGv-0C-ewu:backgroundImage"/>
+                                                <state key="normal" title="Person 1" image="WTPlaceholder" backgroundImage="button:FGv-0C-ewu:backgroundImage"/>
                                                 <connections>
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0X-ga-X94"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-si-bP2" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-si-bP2" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="179" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qlO-si-bP2" secondAttribute="height" multiplier="1:1" id="aiT-Qv-AU6"/>
@@ -87,7 +87,7 @@
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCs-fq-4gM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9V-c5-o1r" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9V-c5-o1r" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="358" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="m9V-c5-o1r" secondAttribute="height" multiplier="1:1" id="ZgB-UY-UAw"/>
@@ -104,7 +104,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-07-xma" userLabel="Inner Stack View 2">
                                         <rect key="frame" x="179" y="26" width="164" height="522"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-LA-aOV" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-LA-aOV" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wKD-LA-aOV" secondAttribute="height" multiplier="1:1" id="jTy-xr-yVR"/>
@@ -115,7 +115,7 @@
                                                     <action selector="faceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJ2-f6-JBo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT1-JL-4jJ" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT1-JL-4jJ" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="179" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sT1-JL-4jJ" secondAttribute="height" multiplier="1:1" id="a4I-eK-8ky"/>
@@ -161,17 +161,17 @@
                         <outlet property="innerStackView2" destination="9jZ-07-xma" id="qPn-q5-7bh"/>
                         <outlet property="outerStackView" destination="vIP-zJ-c7A" id="9jW-Zm-qp5"/>
                         <outlet property="questionLabel" destination="YNy-dp-Uoo" id="WOZ-Nd-EOU"/>
-                        <outletCollection property="imageButtons" destination="ljo-Aa-9vE" collectionClass="NSMutableArray" id="anO-Df-52G"/>
-                        <outletCollection property="imageButtons" destination="wKD-LA-aOV" collectionClass="NSMutableArray" id="T3m-xx-NPh"/>
-                        <outletCollection property="imageButtons" destination="m9V-c5-o1r" collectionClass="NSMutableArray" id="3A8-Zw-oMO"/>
-                        <outletCollection property="imageButtons" destination="FGv-0C-ewu" collectionClass="NSMutableArray" id="9dr-Zd-0sL"/>
-                        <outletCollection property="imageButtons" destination="sT1-JL-4jJ" collectionClass="NSMutableArray" id="LvM-VS-SNj"/>
-                        <outletCollection property="imageButtons" destination="qlO-si-bP2" collectionClass="NSMutableArray" id="PIg-jS-ozh"/>
+                        <outletCollection property="imageButtons" destination="FGv-0C-ewu" collectionClass="NSMutableArray" id="g81-Gr-6vb"/>
+                        <outletCollection property="imageButtons" destination="qlO-si-bP2" collectionClass="NSMutableArray" id="vpr-x1-3sz"/>
+                        <outletCollection property="imageButtons" destination="m9V-c5-o1r" collectionClass="NSMutableArray" id="iEg-sg-U1g"/>
+                        <outletCollection property="imageButtons" destination="wKD-LA-aOV" collectionClass="NSMutableArray" id="Q4G-UX-0ex"/>
+                        <outletCollection property="imageButtons" destination="sT1-JL-4jJ" collectionClass="NSMutableArray" id="dAX-ix-myk"/>
+                        <outletCollection property="imageButtons" destination="ljo-Aa-9vE" collectionClass="NSMutableArray" id="PzL-v3-LhO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.60000000000002" y="469.1154422788606"/>
+            <point key="canvasLocation" x="222" y="423"/>
         </scene>
     </scenes>
     <resources>

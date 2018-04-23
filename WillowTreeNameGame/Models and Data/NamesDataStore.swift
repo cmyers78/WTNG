@@ -14,6 +14,9 @@ class NamesDataStore {
     func saveNamesData(withName namesDataArray : [NamesDataModel]) {
         let configuration = Realm.Configuration(encryptionKey: getKey())
         let realm = try! Realm(configuration: configuration)
+        if !realm.isEmpty {
+            deleteNames()
+        }
         try! realm.write {
             realm.add(namesDataArray)
         }
