@@ -40,33 +40,18 @@ open class FaceButton: UIButton {
     }
 
     // TODO: Show the user's face on the button.
-    
-    func getFaces() -> [UIImage] {
-        var imageAray = [UIImage]()
-        let namesData = NamesDataStore().getNamesData()
-        for i in 0...5 {
-            let user = namesData[i]
-            if let imageString = user.headShotURL {
-                if let imageURL = URL(string: imageString) {
-                    let image = convertToImage(url: imageURL)
-                        imageAray.append(image)
-                }
-            }
-        }
-        return imageAray
-    }
-    
-    private func convertToImage(url : URL) -> UIImage{
-        var imageFromURL = UIImage()
+}
+
+extension UIButton {
+    func convertURLToImage(urlString : String, completion: @escaping (UIImage) -> Void) {
         DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        imageFromURL = image
-                    }
-                }
+            guard let url = URL(string: urlString) else { return }
+            guard let data = try? Data(contentsOf: url) else { return }
+            guard let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                completion(image)
             }
+           
         }
-        return imageFromURL
     }
 }

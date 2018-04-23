@@ -23,6 +23,7 @@
 		C681218E208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */; };
 		C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */; };
 		C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */; };
+		C6DDBB8D208DF46100F4D3B8 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C681218F208A3B9E00DC7B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataModel.swift; sourceTree = "<group>"; };
 		C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataStore.swift; sourceTree = "<group>"; };
+		C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		CBE77A99C3214E0CA11F9DA2 /* Pods_WillowTreeNameGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B218F8A997F8FD9426FB80 /* Pods-WillowTreeNameGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillowTreeNameGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WillowTreeNameGame/Pods-WillowTreeNameGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F16130CC1166161997A4662E /* Pods_WillowTreeNameGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				C61B40C1208CDBFB00AD03D9 /* NameGameViewController.swift */,
+				C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,16 +193,15 @@
 			isa = PBXGroup;
 			children = (
 				C681216D208A3B9C00DC7B3F /* AppDelegate.swift */,
+				C6C2F17B208D688C00C5DF1D /* Constants */,
+				C6C2F17D208D68A700C5DF1D /* Models and Data */,
 				C61B40CB208CE02200AD03D9 /* ViewControllers */,
 				C61B40C9208CE00500AD03D9 /* Views */,
 				C61B40CA208CE01000AD03D9 /* Game Logic */,
 				C61B40CC208CE03F00AD03D9 /* Storyboards */,
 				C61B40CD208CE04D00AD03D9 /* Supporting Files */,
 				C61B40C7208CDD5400AD03D9 /* Info.plist */,
-				C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */,
-				C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */,
-				C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */,
-				C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */,
+				C6C2F17C208D689700C5DF1D /* Networking */,
 			);
 			path = WillowTreeNameGame;
 			sourceTree = "<group>";
@@ -219,6 +221,31 @@
 				C681218F208A3B9E00DC7B3F /* Info.plist */,
 			);
 			path = WillowTreeNameGameUITests;
+			sourceTree = "<group>";
+		};
+		C6C2F17B208D688C00C5DF1D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C6C2F17C208D689700C5DF1D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C6C2F17D208D68A700C5DF1D /* Models and Data */ = {
+			isa = PBXGroup;
+			children = (
+				C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */,
+				C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */,
+			);
+			path = "Models and Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,6 +507,7 @@
 				C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */,
 				C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */,
 				C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */,
+				C6DDBB8D208DF46100F4D3B8 /* HomeScreenViewController.swift in Sources */,
 				C61B40C2208CDBFB00AD03D9 /* NameGameViewController.swift in Sources */,
 				C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */,
 				C61B40CF208CE0AA00AD03D9 /* AppConstants.swift in Sources */,
