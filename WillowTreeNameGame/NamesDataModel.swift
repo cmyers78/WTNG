@@ -34,7 +34,7 @@ extension NamesDataModel {
             self.firstName = firstName
             self.lastName = lastName
             self.jobTitle = jobTitle
-            self.headShotURL = headShotURL
+            self.headShotURL = "http:" + headShotURL
         }
     }
 }

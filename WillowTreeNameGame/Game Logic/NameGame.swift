@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameplayKit
 
 protocol NameGameDelegate: class {
 }
@@ -16,8 +17,8 @@ class NameGame {
     weak var delegate: NameGameDelegate?
 
     let numberPeople = 6
-
-
+    
+    
     // Load JSON data from API
     func loadGameData(completion: @escaping () -> Void) {
 
