@@ -10,6 +10,7 @@ import Foundation
 import GameplayKit
 
 protocol NameGameDelegate: class {
+    func startGame(with gameData : (selectedNamesArray : [NamesDataModel], correctAnswer : Int))
 }
 
 class NameGame {
@@ -19,27 +20,12 @@ class NameGame {
 
     let numberPeople = 6
     var score = 0
-    func startGame() {
-    }
     
-    func evaluateChoice(_ sender : UIButton) {
-        if sender.tag == 0 {
-            print("correct")
-            score += 1
-        } else {
-            print("incorrect")
-        }
-    }
-    
-    func generateNamesArray() -> (selectedNamesArray : [NamesDataModel], correctAnswer : Int) {
+    func generateNamesArray() {
         modelData = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: modelData) as! [NamesDataModel]
         let modelSlice = Array(modelData[0...5])
         let correctAnswer = GKRandomSource.sharedRandom().nextInt(upperBound: numberPeople)
-        return (modelSlice, correctAnswer)
+        self.delegate?.startGame(with: (modelSlice, correctAnswer))
     }
     
-    // Load JSON data from API
-    func loadGameData(completion: @escaping () -> Void) {
-
-    }
 }

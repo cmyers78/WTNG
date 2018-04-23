@@ -47,4 +47,14 @@ extension NamesDataModel {
             }
         }
     }
+    
+    func fullName() -> String {
+        var fullName = String()
+        if let firstName = self.firstName {
+            if let lastName = self.lastName {
+                fullName = "\(firstName) \(lastName)"
+            }
+        }
+        return fullName
+    }
 }
