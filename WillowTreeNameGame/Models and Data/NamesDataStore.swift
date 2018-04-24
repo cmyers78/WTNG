@@ -22,15 +22,29 @@ class NamesDataStore {
         }
     }
     
-    func getNamesData() -> Results<NamesDataModel> {
+    func getNamesData(forGame : GameType ) -> [NamesDataModel] {
         let configuration = Realm.Configuration(encryptionKey: getKey())
         let decryptNames = try! Realm(configuration: configuration)
-        return decryptNames.objects(NamesDataModel.self)
+        var filtered = [NamesDataModel]()
+        switch forGame {
+        case .normal:
+            filtered =  Array(decryptNames.objects(NamesDataModel.self))
+        case .matt:
+            filtered = Array(decryptNames.objects(NamesDataModel.self).filter { dataModel in
+                (dataModel.firstName?.lowercased().contains("mat"))!
+            })
+        case .teams:
+            filtered =  Array(decryptNames.objects(NamesDataModel.self).filter({ dataModel in
+                dataModel.jobTitle != nil
+            }))
+        }
+
+        return filtered
     }
     
-    func returnNameDataAtIndex(_ index : Int) -> NamesDataModel {
-        return getNamesData()[index]
-    }
+//    func returnNameDataAtIndex(_ index : Int) -> NamesDataModel {
+//        return getNamesData()[index]
+//    }
     
     func deleteNames() {
         let configuration = Realm.Configuration(encryptionKey: getKey())

@@ -33,7 +33,6 @@ class NetworkRequests {
                     self.opQueue.addOperation {
                         print("async call....")
                         NamesDataStore().saveNamesData(withName: namesData)
-                        print(NamesDataStore().getNamesData().count)
                     }
                 }
             }

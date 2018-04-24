@@ -49,7 +49,7 @@ extension NamesDataModel {
     }
     
     func fullName() -> String {
-        var fullName = String()
+        var fullName = "name not found"
         if let firstName = self.firstName {
             if let lastName = self.lastName {
                 fullName = "\(firstName) \(lastName)"
