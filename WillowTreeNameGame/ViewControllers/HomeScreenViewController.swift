@@ -17,12 +17,13 @@ class HomeScreenViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func playGame(_ sender: UIButton) {
-        print("button tapped")
+    func start(forGameType : GameType) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "NameGameVC") as! NameGameViewController
-        vc.setGameGenerator(with: NameGame(), forGameType: .normal)
+        vc.setGameGenerator(with: NameGame(), forGameType: forGameType)
         present(vc, animated: true)
+    }
+    @IBAction func playGame(_ sender: UIButton) {
+        start(forGameType: .normal)
     }
 
 }

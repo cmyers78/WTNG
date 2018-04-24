@@ -7,41 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41DE74C6F93987DBC24F1139 /* Pods_WillowTreeNameGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB33D4C011E4192870046C6 /* Pods_WillowTreeNameGameUITests.framework */; };
 		7022C07B15A360FF47E08779 /* Pods_WillowTreeNameGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16130CC1166161997A4662E /* Pods_WillowTreeNameGame.framework */; };
-		77D1761AD5211F5B06AA2650 /* Pods_WillowTreeNameGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE77A99C3214E0CA11F9DA2 /* Pods_WillowTreeNameGameTests.framework */; };
 		C61B40C0208CDBF000AD03D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61B40BE208CDBF000AD03D9 /* Main.storyboard */; };
 		C61B40C2208CDBFB00AD03D9 /* NameGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C1208CDBFB00AD03D9 /* NameGameViewController.swift */; };
 		C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C3208CDC0700AD03D9 /* FaceButton.swift */; };
 		C61B40C6208CDC3700AD03D9 /* NameGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40C5208CDC3700AD03D9 /* NameGame.swift */; };
 		C61B40CF208CE0AA00AD03D9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */; };
 		C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */; };
+		C6300E3C208FBCDA00539FF1 /* ScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6300E3B208FBCDA00539FF1 /* ScoreData.swift */; };
+		C6300E3E208FC2DE00539FF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C61B40C7208CDD5400AD03D9 /* Info.plist */; };
 		C681216E208A3B9C00DC7B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681216D208A3B9C00DC7B3F /* AppDelegate.swift */; };
 		C6812175208A3B9D00DC7B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6812174208A3B9D00DC7B3F /* Assets.xcassets */; };
 		C6812178208A3B9D00DC7B3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6812176208A3B9D00DC7B3F /* LaunchScreen.storyboard */; };
-		C6812183208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6812182208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift */; };
-		C681218E208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */; };
 		C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */; };
 		C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */; };
 		C6DDBB8D208DF46100F4D3B8 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C681217F208A3B9E00DC7B3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6812162208A3B9C00DC7B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6812169208A3B9C00DC7B3F;
-			remoteInfo = WillowTreeNameGame;
-		};
-		C681218A208A3B9E00DC7B3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6812162208A3B9C00DC7B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6812169208A3B9C00DC7B3F;
-			remoteInfo = WillowTreeNameGame;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		44EA3E4A562FB61D1A54DA4C /* Pods-WillowTreeNameGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillowTreeNameGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WillowTreeNameGameUITests/Pods-WillowTreeNameGameUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,15 +38,11 @@
 		C61B40C7208CDD5400AD03D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61B40CE208CE0AA00AD03D9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		C61B40D0208CE10D00AD03D9 /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		C6300E3B208FBCDA00539FF1 /* ScoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreData.swift; sourceTree = "<group>"; };
 		C681216A208A3B9C00DC7B3F /* WillowTreeNameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillowTreeNameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C681216D208A3B9C00DC7B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6812174208A3B9D00DC7B3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6812177208A3B9D00DC7B3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C681217E208A3B9E00DC7B3F /* WillowTreeNameGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillowTreeNameGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6812182208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillowTreeNameGameTests.swift; sourceTree = "<group>"; };
-		C6812189208A3B9E00DC7B3F /* WillowTreeNameGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillowTreeNameGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillowTreeNameGameUITests.swift; sourceTree = "<group>"; };
-		C681218F208A3B9E00DC7B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataModel.swift; sourceTree = "<group>"; };
 		C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataStore.swift; sourceTree = "<group>"; };
 		C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -80,22 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7022C07B15A360FF47E08779 /* Pods_WillowTreeNameGame.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C681217B208A3B9E00DC7B3F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77D1761AD5211F5B06AA2650 /* Pods_WillowTreeNameGameTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6812186208A3B9E00DC7B3F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41DE74C6F93987DBC24F1139 /* Pods_WillowTreeNameGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				C681216C208A3B9C00DC7B3F /* WillowTreeNameGame */,
-				C6812181208A3B9E00DC7B3F /* WillowTreeNameGameTests */,
-				C681218C208A3B9E00DC7B3F /* WillowTreeNameGameUITests */,
 				C681216B208A3B9C00DC7B3F /* Products */,
 				7FE265D87C5FE118BCB01BFF /* Pods */,
 				04656BE504F82C0A6F9EA714 /* Frameworks */,
@@ -183,8 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				C681216A208A3B9C00DC7B3F /* WillowTreeNameGame.app */,
-				C681217E208A3B9E00DC7B3F /* WillowTreeNameGameTests.xctest */,
-				C6812189208A3B9E00DC7B3F /* WillowTreeNameGameUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,23 +161,6 @@
 				C6C2F17C208D689700C5DF1D /* Networking */,
 			);
 			path = WillowTreeNameGame;
-			sourceTree = "<group>";
-		};
-		C6812181208A3B9E00DC7B3F /* WillowTreeNameGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				C6812182208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift */,
-			);
-			path = WillowTreeNameGameTests;
-			sourceTree = "<group>";
-		};
-		C681218C208A3B9E00DC7B3F /* WillowTreeNameGameUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C681218D208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift */,
-				C681218F208A3B9E00DC7B3F /* Info.plist */,
-			);
-			path = WillowTreeNameGameUITests;
 			sourceTree = "<group>";
 		};
 		C6C2F17B208D688C00C5DF1D /* Constants */ = {
@@ -244,6 +184,7 @@
 			children = (
 				C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */,
 				C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */,
+				C6300E3B208FBCDA00539FF1 /* ScoreData.swift */,
 			);
 			path = "Models and Data";
 			sourceTree = "<group>";
@@ -270,46 +211,6 @@
 			productReference = C681216A208A3B9C00DC7B3F /* WillowTreeNameGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C681217D208A3B9E00DC7B3F /* WillowTreeNameGameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6812195208A3B9E00DC7B3F /* Build configuration list for PBXNativeTarget "WillowTreeNameGameTests" */;
-			buildPhases = (
-				99CAB99977D315A01070C8E2 /* [CP] Check Pods Manifest.lock */,
-				C681217A208A3B9E00DC7B3F /* Sources */,
-				C681217B208A3B9E00DC7B3F /* Frameworks */,
-				C681217C208A3B9E00DC7B3F /* Resources */,
-				D4B7F1BCBEB195FE2086150B /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6812180208A3B9E00DC7B3F /* PBXTargetDependency */,
-			);
-			name = WillowTreeNameGameTests;
-			productName = WillowTreeNameGameTests;
-			productReference = C681217E208A3B9E00DC7B3F /* WillowTreeNameGameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C6812188208A3B9E00DC7B3F /* WillowTreeNameGameUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6812198208A3B9E00DC7B3F /* Build configuration list for PBXNativeTarget "WillowTreeNameGameUITests" */;
-			buildPhases = (
-				462EADC26B19349B7DA06335 /* [CP] Check Pods Manifest.lock */,
-				C6812185208A3B9E00DC7B3F /* Sources */,
-				C6812186208A3B9E00DC7B3F /* Frameworks */,
-				C6812187208A3B9E00DC7B3F /* Resources */,
-				C32F92F0C0A1E39761BF6688 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C681218B208A3B9E00DC7B3F /* PBXTargetDependency */,
-			);
-			name = WillowTreeNameGameUITests;
-			productName = WillowTreeNameGameUITests;
-			productReference = C6812189208A3B9E00DC7B3F /* WillowTreeNameGameUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -322,14 +223,6 @@
 				TargetAttributes = {
 					C6812169208A3B9C00DC7B3F = {
 						CreatedOnToolsVersion = 9.3;
-					};
-					C681217D208A3B9E00DC7B3F = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = C6812169208A3B9C00DC7B3F;
-					};
-					C6812188208A3B9E00DC7B3F = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = C6812169208A3B9C00DC7B3F;
 					};
 				};
 			};
@@ -347,8 +240,6 @@
 			projectRoot = "";
 			targets = (
 				C6812169208A3B9C00DC7B3F /* WillowTreeNameGame */,
-				C681217D208A3B9E00DC7B3F /* WillowTreeNameGameTests */,
-				C6812188208A3B9E00DC7B3F /* WillowTreeNameGameUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,47 +249,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6300E3E208FC2DE00539FF1 /* Info.plist in Resources */,
 				C61B40C0208CDBF000AD03D9 /* Main.storyboard in Resources */,
 				C6812178208A3B9D00DC7B3F /* LaunchScreen.storyboard in Resources */,
 				C6812175208A3B9D00DC7B3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C681217C208A3B9E00DC7B3F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6812187208A3B9E00DC7B3F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		462EADC26B19349B7DA06335 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WillowTreeNameGameUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		97513579E001E5C3F7544514 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,24 +271,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-WillowTreeNameGame-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99CAB99977D315A01070C8E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WillowTreeNameGameTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -455,46 +297,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGame/Pods-WillowTreeNameGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C32F92F0C0A1E39761BF6688 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGameUITests/Pods-WillowTreeNameGameUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGameUITests/Pods-WillowTreeNameGameUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4B7F1BCBEB195FE2086150B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGameTests/Pods-WillowTreeNameGameTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGameTests/Pods-WillowTreeNameGameTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -504,6 +306,7 @@
 			files = (
 				C61B40C6208CDC3700AD03D9 /* NameGame.swift in Sources */,
 				C681216E208A3B9C00DC7B3F /* AppDelegate.swift in Sources */,
+				C6300E3C208FBCDA00539FF1 /* ScoreData.swift in Sources */,
 				C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */,
 				C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */,
 				C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */,
@@ -514,36 +317,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C681217A208A3B9E00DC7B3F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6812183208A3B9E00DC7B3F /* WillowTreeNameGameTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6812185208A3B9E00DC7B3F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C681218E208A3B9E00DC7B3F /* WillowTreeNameGameUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C6812180208A3B9E00DC7B3F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6812169208A3B9C00DC7B3F /* WillowTreeNameGame */;
-			targetProxy = C681217F208A3B9E00DC7B3F /* PBXContainerItemProxy */;
-		};
-		C681218B208A3B9E00DC7B3F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6812169208A3B9C00DC7B3F /* WillowTreeNameGame */;
-			targetProxy = C681218A208A3B9E00DC7B3F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C61B40BE208CDBF000AD03D9 /* Main.storyboard */ = {
@@ -717,92 +491,6 @@
 			};
 			name = Release;
 		};
-		C6812196208A3B9E00DC7B3F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBD6E0EADBC4E8AB8CB858CA /* Pods-WillowTreeNameGameTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYW89PFS48;
-				INFOPLIST_FILE = WillowTreeNameGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WillowTreeNameGame.app/WillowTreeNameGame";
-			};
-			name = Debug;
-		};
-		C6812197208A3B9E00DC7B3F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B98D09212CE980FE45513ED /* Pods-WillowTreeNameGameTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYW89PFS48;
-				INFOPLIST_FILE = WillowTreeNameGameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WillowTreeNameGame.app/WillowTreeNameGame";
-			};
-			name = Release;
-		};
-		C6812199208A3B9E00DC7B3F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B344C8FFA8294A9C398BEE43 /* Pods-WillowTreeNameGameUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYW89PFS48;
-				INFOPLIST_FILE = WillowTreeNameGameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WillowTreeNameGame;
-			};
-			name = Debug;
-		};
-		C681219A208A3B9E00DC7B3F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44EA3E4A562FB61D1A54DA4C /* Pods-WillowTreeNameGameUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYW89PFS48;
-				INFOPLIST_FILE = WillowTreeNameGameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dragomandevelopers.WillowTreeNameGameUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WillowTreeNameGame;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -820,24 +508,6 @@
 			buildConfigurations = (
 				C6812193208A3B9E00DC7B3F /* Debug */,
 				C6812194208A3B9E00DC7B3F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6812195208A3B9E00DC7B3F /* Build configuration list for PBXNativeTarget "WillowTreeNameGameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6812196208A3B9E00DC7B3F /* Debug */,
-				C6812197208A3B9E00DC7B3F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6812198208A3B9E00DC7B3F /* Build configuration list for PBXNativeTarget "WillowTreeNameGameUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6812199208A3B9E00DC7B3F /* Debug */,
-				C681219A208A3B9E00DC7B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

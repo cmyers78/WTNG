@@ -11,6 +11,5 @@ import UIKit
 
 struct AppConstants {
     static let namesURL = "https://willowtreeapps.com/api/v1.0/profiles/"
-    //static var wTColor = UIColor(red: 0.37, green: 0.73, blue: 0.70, alpha: 1.0)
     let willowTreeColor = UIColor(red: 0.37, green: 0.73, blue: 0.70, alpha: 1.0)
 }

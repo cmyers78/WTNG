@@ -20,7 +20,7 @@ class NameGameViewController: UIViewController, NameGameDelegate {
     
     var correctAnswer = 0
     var selectedNames = [NamesDataModel]()
-    
+    var gameTypeSelected : GameType?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,15 +40,15 @@ class NameGameViewController: UIViewController, NameGameDelegate {
     }
     
     // MARK : - Protocol method implementation
-    func startGame(with gameData: (selectedNamesArray: [NamesDataModel], correctAnswer: Int)) {
+    func startGame(with gameData: (selectedNamesArray: [NamesDataModel], correctAnswer: Int), gameType : GameType) {
         correctAnswer = gameData.correctAnswer
         selectedNames = gameData.selectedNamesArray
+        gameTypeSelected = gameType
         print("Game Started")
         configureFaces(from: gameData.selectedNamesArray) {
             view in
             UIViewController.removeSpinner(spinner: view)
         }
-        
         let correctUser = gameData.selectedNamesArray[gameData.correctAnswer]
         questionLabel.text = "Who is \(correctUser.fullName())"
     }
@@ -56,6 +56,9 @@ class NameGameViewController: UIViewController, NameGameDelegate {
     @IBAction func faceTapped(_ button: FaceButton) {
         if button.tag == correctAnswer {
             print("Correct. Say hi to \(selectedNames[correctAnswer].fullName())")
+            // create new names and start again.
+            guard let gameTypeSelected = gameTypeSelected else { return }
+            nameGame?.generateNamesArray(withFilter: gameTypeSelected)
         } else {
             print("you selected \(selectedNames[button.tag].fullName())")
         }
