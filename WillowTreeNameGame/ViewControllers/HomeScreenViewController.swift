@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
     }
     func start(forGameType : GameType) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "NameGameVC") as! NameGameViewController
-        vc.setGameGenerator(with: NameGame(), forGameType: forGameType)
+        vc.setGameGenerator(with: NameGame(), forGameType: forGameType, scoreData: ScoreData())
         present(vc, animated: true)
     }
     @IBAction func playGame(_ sender: UIButton) {

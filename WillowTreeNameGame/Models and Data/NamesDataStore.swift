@@ -28,7 +28,7 @@ class NamesDataStore {
         var filtered = [NamesDataModel]()
         switch forGame {
         case .normal:
-            filtered =  Array(decryptNames.objects(NamesDataModel.self))
+            filtered = Array(decryptNames.objects(NamesDataModel.self))
         case .matt:
             filtered = Array(decryptNames.objects(NamesDataModel.self).filter { dataModel in
                 (dataModel.firstName?.lowercased().contains("mat"))!
@@ -38,14 +38,14 @@ class NamesDataStore {
                 dataModel.jobTitle != nil
             }))
         }
-
+        
         return filtered
     }
     
-//    func returnNameDataAtIndex(_ index : Int) -> NamesDataModel {
-//        return getNamesData()[index]
-//    }
-    
+    // Inefficient to do this but....
+    // Would rather know if there has been a change in the json to
+    // know if I should download again and add new users
+    //
     func deleteNames() {
         let configuration = Realm.Configuration(encryptionKey: getKey())
         let realm = try! Realm(configuration: configuration)

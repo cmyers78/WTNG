@@ -9,7 +9,18 @@
 import Foundation
 import UIKit
 
+// Type Aliases
+typealias JSONDictionary = [String : AnyObject]
+typealias JSONArray = [JSONDictionary]
+
+// Constants
 struct AppConstants {
     static let namesURL = "https://willowtreeapps.com/api/v1.0/profiles/"
-    let willowTreeColor = UIColor(red: 0.37, green: 0.73, blue: 0.70, alpha: 1.0)
+    static let homeScreenVC = "HomeScreenVC"
+    static let nameGameVC = "NameGameVC"
+    static let feedbackPopupVC = "FeedbackPopupVC"
+    static let gameSummaryVC = "GameSummaryVC"
+    static let feedbackContinueButtonTitle = "Continue"
+    static let willowTreeColor = UIColor(red: 100/255, green: 214/255, blue: 196/255, alpha: 1.0)
+    
 }

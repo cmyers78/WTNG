@@ -8,15 +8,8 @@
 
 import Foundation
 
-enum NetworkResponse {
-    case success(Data)
-    case failure(Error)
-}
-
 class NetworkRequests {
-    
-    typealias JSONDictionary = [String : AnyObject]
-    typealias JSONArray = [JSONDictionary]
+
     let opQueue = OperationQueue.main
     func loadNamesFromNetwork() {
         if let url = URL(string: AppConstants.namesURL) {
@@ -43,12 +36,12 @@ class NetworkRequests {
     }
     
     private func parseJSON(from data : Data?) -> JSONArray? {
-        var namesDict : JSONArray? = nil
+        var namesDataArray : JSONArray? = nil
         
         if let namesData = data {
             do {
-                if let jsonDict = try JSONSerialization.jsonObject(with: namesData, options: []) as? JSONArray {
-                    namesDict = jsonDict
+                if let jsonArray = try JSONSerialization.jsonObject(with: namesData, options: []) as? JSONArray {
+                    namesDataArray = jsonArray
                 } else {
                     print("I could not parse JSON")
                 }
@@ -56,6 +49,6 @@ class NetworkRequests {
                 print(error)
             }
         }
-        return namesDict
+        return namesDataArray
     }
 }

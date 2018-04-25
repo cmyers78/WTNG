@@ -10,8 +10,6 @@ import Foundation
 import RealmSwift
 
 class NamesDataModel : Object {
-    typealias JSONDictionary = [String : AnyObject]
-    typealias JSONArray = [JSONDictionary]
     
     @objc dynamic var id : String?
     @objc dynamic var firstName : String?
@@ -23,6 +21,7 @@ class NamesDataModel : Object {
 extension NamesDataModel {
     convenience init(jsonArray : JSONArray) {
         self.init()
+
         for item in jsonArray {
             if let id = item["id"] as? String {
                 self.id = id
@@ -56,5 +55,13 @@ extension NamesDataModel {
             }
         }
         return fullName
+    }
+    
+    func employeeTitle() -> String {
+        var jobTitle = "Job title not listed."
+        if let jt = self.jobTitle {
+            jobTitle = jt
+        }
+        return jobTitle
     }
 }

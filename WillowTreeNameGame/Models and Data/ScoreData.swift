@@ -9,8 +9,8 @@
 import Foundation
 
 struct ScoreData {
-    var attempts : Int
-    var correct : Int
-    var averageTimeToCorrect : Double
-    
+    var attempts : Int = 0
+    var timeStarted : Double = 0.0
+    var timeToCorrect : Double = 0.0
+    var foundCorrectName = false
 }

@@ -42,7 +42,7 @@ open class FaceButton: UIButton {
     // TODO: Show the user's face on the button.
 }
 
-extension UIButton {
+extension FaceButton {
     func convertURLToImage(urlString : String, completion: @escaping (UIImage) -> Void) {
         DispatchQueue.global().async {
             guard let url = URL(string: urlString) else { return }
