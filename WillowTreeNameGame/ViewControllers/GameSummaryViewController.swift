@@ -10,6 +10,7 @@ import UIKit
 
 class GameSummaryViewController: UIViewController {
 
+    @IBOutlet weak var summaryContainer: UIView!
     @IBOutlet weak var wtImageView: UIImageView!
     @IBOutlet weak var homeButtonOutlet: UIButton!
     @IBOutlet weak var attemptsLabel: UILabel!
@@ -23,8 +24,8 @@ class GameSummaryViewController: UIViewController {
         let timeDifferenceSum = scoreDataArray?.reduce(0, { val1, val2 in
             (val1) + (val2.timeToCorrect - val2.timeStarted)
         }) ?? 0
-
-        return (timeDifferenceSum / Double(scoreDataArray?.count ?? 1))
+        let timeDiff = (timeDifferenceSum / Double(scoreDataArray?.count ?? 1))
+        return timeDiff > 0 ? timeDiff : 0
     }
     
     private var numberOfAttemptsPerGame : Double {
@@ -40,8 +41,7 @@ class GameSummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        wtImageView.layer.cornerRadius = 15
-        homeButtonOutlet.layer.cornerRadius = 15
+        summaryContainer.layer.cornerRadius = 15
         setSummaryLabels()
         
     }
@@ -50,7 +50,7 @@ class GameSummaryViewController: UIViewController {
     }
     
     private func setSummaryLabels() {
-        averageTimeToCorrectLabel.text = "Avg. time to correct: " + String(format: "%.3f", timeToCorrect)
+        averageTimeToCorrectLabel.text = "Avg. time to correct: " + String(format: "%.2f", timeToCorrect) + " secs."
         attemptsLabel.text = "Avg. attempts per round: " + String(format: "%.2f", numberOfAttemptsPerGame)
         totalCorrect.text = "Total Correct Names: \(totalCorrectGames)"
     }

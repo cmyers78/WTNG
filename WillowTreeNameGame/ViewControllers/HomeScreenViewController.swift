@@ -40,7 +40,7 @@ extension HomeScreenViewController : UITableViewDelegate, UITableViewDataSource 
         let game = AppConstants.gameChoicesDict[indexPath.row]
         
         cell.gameNameLabel.text = "\(game?.title ?? "No Title Available") - \(game?.description ?? "No Description Available")"
-        
+        cell.gameImage.image = game?.image
         return cell
     }
     
