@@ -43,7 +43,7 @@ class FeedbackPopupViewController: UIViewController {
         self.isCorrect = isCorrect
     }
     
-    private func fillFeedbackPopup() {
+    func fillFeedbackPopup() {
         if let isCorrect = isCorrect {
             feedbackLabel.text = isCorrect ? "Correct!" : "Incorrect. Try Again!"
         } else {

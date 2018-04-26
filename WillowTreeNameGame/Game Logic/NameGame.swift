@@ -17,7 +17,7 @@ enum GameType : Int {
 }
 class NameGame {
     // TODO: - what is this for?
-    var stringArray = [String]()
+    //var stringArray = [String]()
     weak var delegate: NameGameDelegate?
 
     let numberPeople = 6

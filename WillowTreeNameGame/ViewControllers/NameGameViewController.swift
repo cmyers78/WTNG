@@ -46,7 +46,7 @@ class NameGameViewController: UIViewController {
         nameGame.generateNamesArray(withFilter: forGameType)
     }
     
-    private func obtainFeedback(namesData : NamesDataModel, userImage : UIImage, correctAnswer : Bool) {
+    func obtainFeedback(namesData : NamesDataModel, userImage : UIImage, correctAnswer : Bool) {
         let popupVC = storyboard?.instantiateViewController(withIdentifier: AppConstants.feedbackPopupVC) as! FeedbackPopupViewController
         popupVC.injectUserData(namesData: namesData, userImage: userImage, isCorrect: correctAnswer)
         popupVC.popupDelegate = self

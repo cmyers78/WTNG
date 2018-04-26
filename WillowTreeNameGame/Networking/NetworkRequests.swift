@@ -22,7 +22,7 @@ class NetworkRequests {
                     let namesData = namesJSONArray.map { data in
                         NamesDataModel(jsonArray: [data])
                     }
-                    self.opQueue.maxConcurrentOperationCount = 10
+                    self.opQueue.maxConcurrentOperationCount = 5
                     self.opQueue.addOperation {
                         print("async call....")
                         NamesDataStore().saveNamesData(withName: namesData)
@@ -35,7 +35,8 @@ class NetworkRequests {
         }
     }
     
-    private func parseJSON(from data : Data?) -> JSONArray? {
+    // was private...took it off to test
+     func parseJSON(from data : Data?) -> JSONArray? {
         var namesDataArray : JSONArray? = nil
         
         if let namesData = data {

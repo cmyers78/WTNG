@@ -17,6 +17,10 @@ class NamesDataStore {
         
         // check to see if current dataStore count is the same as incoming JSON, if not, filter through the incoming json
         // to find unique names and add to array
+        //
+        // NOTE: - it will be nice to be able to hit the API and get back a response to see if there has been an update
+        // so that the app could determine whether it needed to download names again.
+        //
         let currentDataStoreCount = getNamesData(forGame: .normal).count
         
         if currentDataStoreCount == namesDataArray.count {
@@ -53,19 +57,7 @@ class NamesDataStore {
         return filtered
     }
     
-    // Inefficient to do this but....
-    // Would rather know if there has been a change in the json to
-    // know if I should download again and add new users
-    //
-    func deleteNames() {
-        let configuration = Realm.Configuration(encryptionKey: getKey())
-        let realm = try! Realm(configuration: configuration)
-        try! realm.write {
-            realm.deleteAll()
-        }
-    }
-    
-    // From Realm.io encryption documents
+    // From Realm.io encryption documents and not testing so marked private
    private func getKey() -> Data {
         let keychainIdentifier = "names.willowTreeApp.identiferKey"
         let keychainIdentifierData = keychainIdentifier.data(using: String.Encoding.utf8, allowLossyConversion: false)!
