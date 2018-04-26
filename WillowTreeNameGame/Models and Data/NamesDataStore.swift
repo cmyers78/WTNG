@@ -14,11 +14,22 @@ class NamesDataStore {
     func saveNamesData(withName namesDataArray : [NamesDataModel]) {
         let configuration = Realm.Configuration(encryptionKey: getKey())
         let realm = try! Realm(configuration: configuration)
-        if !realm.isEmpty {
-            deleteNames()
-        }
-        try! realm.write {
-            realm.add(namesDataArray)
+        
+        // check to see if current dataStore count is the same as incoming JSON, if not, filter through the incoming json
+        // to find unique names and add to array
+        let currentDataStoreCount = getNamesData(forGame: .normal).count
+        
+        if currentDataStoreCount == namesDataArray.count {
+            // no new data
+            print("Count equal for currentDataStore: \(currentDataStoreCount) and namesDataArray: \(namesDataArray.count)")
+            return
+        } else {
+            let filteredForDuplicates = namesDataArray.filter { getNamesData(forGame: .normal).contains($0) == false }
+            print("new data. write transaction")
+            print("filteredDataCount = \(filteredForDuplicates.count)")
+            try! realm.write {
+                realm.add(filteredForDuplicates)
+            }
         }
     }
     

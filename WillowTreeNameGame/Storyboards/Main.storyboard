@@ -24,27 +24,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puk-KP-2g2">
-                                <rect key="frame" x="136" y="309" width="102" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Play me">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="playGame:" destination="ey9-RD-Eyb" eventType="touchUpInside" id="ZM0-3b-ACr"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willow Tree Name Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBf-RI-k9p">
+                                <rect key="frame" x="41" y="45" width="293.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-J1-zXE">
+                                <rect key="frame" x="0.0" y="233.5" width="375" height="433.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="126" id="yuu-le-eAr" customClass="HomeScreenTableViewCell" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yuu-le-eAr" id="Ioi-51-gQa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name Here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-mj-pr4">
+                                                    <rect key="frame" x="25" y="21" width="202.5" height="84"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WTPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-zq-Ob7">
+                                                    <rect key="frame" x="237.5" y="6" width="112.5" height="113"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3cY-zq-Ob7" secondAttribute="trailing" constant="10" id="2eL-T9-Dea"/>
+                                                <constraint firstItem="eZQ-mj-pr4" firstAttribute="top" secondItem="Ioi-51-gQa" secondAttribute="topMargin" constant="10" id="6wV-MB-Hts"/>
+                                                <constraint firstItem="eZQ-mj-pr4" firstAttribute="leading" secondItem="Ioi-51-gQa" secondAttribute="leadingMargin" constant="10" id="INO-Ta-fmm"/>
+                                                <constraint firstItem="3cY-zq-Ob7" firstAttribute="leading" secondItem="eZQ-mj-pr4" secondAttribute="trailing" constant="10" id="LnZ-uI-gol"/>
+                                                <constraint firstItem="3cY-zq-Ob7" firstAttribute="centerY" secondItem="Ioi-51-gQa" secondAttribute="centerY" id="knR-A0-2rV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eZQ-mj-pr4" secondAttribute="bottom" constant="10" id="nx6-Rk-qBa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="width" secondItem="yuu-le-eAr" secondAttribute="width" multiplier="0.3" id="HwT-OS-LLf"/>
+                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="height" secondItem="yuu-le-eAr" secondAttribute="height" multiplier="0.9" id="akC-B5-YEd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gameImage" destination="3cY-zq-Ob7" id="qld-m4-oGM"/>
+                                            <outlet property="gameNameLabel" destination="eZQ-mj-pr4" id="4pg-JZ-BsU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be shown photos of Willow Tree employees. Try and match the name to the photo! Select your game mode below." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc1-Np-3Id">
+                                <rect key="frame" x="10" y="86.5" width="355" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3921568627" green="0.83921568629999999" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Puk-KP-2g2" firstAttribute="centerY" secondItem="J8y-D1-tr9" secondAttribute="centerY" id="Hff-nf-I5N"/>
-                            <constraint firstItem="Puk-KP-2g2" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="NFN-2V-mH3"/>
+                            <constraint firstItem="3DM-J1-zXE" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="06W-cy-ClR"/>
+                            <constraint firstAttribute="trailing" secondItem="rc1-Np-3Id" secondAttribute="trailing" constant="10" id="6gu-EH-jJI"/>
+                            <constraint firstItem="E4P-Fy-1Vi" firstAttribute="top" secondItem="3DM-J1-zXE" secondAttribute="bottom" id="AIu-OK-2o3"/>
+                            <constraint firstItem="rc1-Np-3Id" firstAttribute="top" secondItem="hBf-RI-k9p" secondAttribute="bottom" constant="10" id="EUt-vb-YVa"/>
+                            <constraint firstItem="rc1-Np-3Id" firstAttribute="leading" secondItem="J8y-D1-tr9" secondAttribute="leading" constant="10" id="HzS-gV-Ctb"/>
+                            <constraint firstItem="hBf-RI-k9p" firstAttribute="top" secondItem="ayb-Su-axt" secondAttribute="bottom" constant="25" id="Ocp-cE-WTe"/>
+                            <constraint firstItem="3DM-J1-zXE" firstAttribute="width" secondItem="J8y-D1-tr9" secondAttribute="width" id="fOa-lT-9MJ"/>
+                            <constraint firstItem="hBf-RI-k9p" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="ggd-Tj-wk8"/>
+                            <constraint firstItem="3DM-J1-zXE" firstAttribute="height" secondItem="J8y-D1-tr9" secondAttribute="height" multiplier="0.65" id="jpK-Iu-N9z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="3DM-J1-zXE" id="sMw-QO-wgW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea9-73-KRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="436"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="435.83208395802103"/>
         </scene>
         <!--Name Game View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -68,10 +121,10 @@
                                 <rect key="frame" x="16" y="83.5" width="343" height="573.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EA9-A5-9wD" userLabel="Inner Stack View 1">
-                                        <rect key="frame" x="0.0" y="26" width="164" height="522"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="164" height="521"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-0C-ewu" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="163.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FGv-0C-ewu" secondAttribute="height" multiplier="1:1" id="aBx-Yy-25R"/>
                                                 </constraints>
@@ -81,7 +134,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-si-bP2" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="179" width="164" height="164"/>
+                                                <rect key="frame" x="0.0" y="178.5" width="164" height="163.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qlO-si-bP2" secondAttribute="height" multiplier="1:1" id="aiT-Qv-AU6"/>
                                                 </constraints>
@@ -92,7 +145,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9V-c5-o1r" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="358" width="164" height="164"/>
+                                                <rect key="frame" x="0.0" y="357" width="164" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="m9V-c5-o1r" secondAttribute="height" multiplier="1:1" id="ZgB-UY-UAw"/>
                                                 </constraints>
@@ -106,7 +159,7 @@
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-07-xma" userLabel="Inner Stack View 2">
-                                        <rect key="frame" x="179" y="26" width="164" height="522"/>
+                                        <rect key="frame" x="179" y="25.5" width="164" height="522.5"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-LA-aOV" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
@@ -131,7 +184,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljo-Aa-9vE" customClass="FaceButton" customModule="WillowTreeNameGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="358" width="164" height="164"/>
+                                                <rect key="frame" x="0.0" y="358" width="164" height="164.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ljo-Aa-9vE" secondAttribute="height" multiplier="1:1" id="Ndx-b5-Keu"/>
                                                 </constraints>
@@ -189,40 +242,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-no-QZy">
-                                <rect key="frame" x="79.5" y="264.5" width="217" height="139.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-no-QZy">
+                                <rect key="frame" x="75" y="255.5" width="225" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for playing!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nx-6S-jLm">
-                                        <rect key="frame" x="0.0" y="0.0" width="217" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average attempts: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDq-pJ-wqx">
-                                        <rect key="frame" x="29" y="45" width="159.5" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="225" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average time to correct:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qa-cs-a9h">
-                                        <rect key="frame" x="7" y="81.5" width="203.5" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="93" width="225" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Correct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-Qf-fpY">
-                                        <rect key="frame" x="53.5" y="118" width="110" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="134.5" width="225" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WTPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-Z9-zJD">
-                                <rect key="frame" x="112.5" y="95" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WTPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-Z9-zJD">
+                                <rect key="frame" x="122" y="50" width="131" height="131.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY6-eD-E1g">
-                                <rect key="frame" x="113" y="424" width="150" height="150"/>
+                                <rect key="frame" x="122" y="506" width="131" height="131"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="homeButton">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -233,22 +287,25 @@
                         </subviews>
                         <color key="backgroundColor" red="0.39215686274509803" green="0.83921568627450982" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LY6-eD-E1g" firstAttribute="top" secondItem="Fea-no-QZy" secondAttribute="bottom" constant="20" id="1P1-hE-AEl"/>
+                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="top" secondItem="TOf-TM-5IB" secondAttribute="bottom" constant="30" id="7H2-7F-xZD"/>
                             <constraint firstItem="LY6-eD-E1g" firstAttribute="width" secondItem="3K8-Z9-zJD" secondAttribute="width" id="CyA-WF-smH"/>
+                            <constraint firstItem="LY6-eD-E1g" firstAttribute="centerX" secondItem="sda-wm-IT0" secondAttribute="centerX" id="UhF-Wa-lwg"/>
                             <constraint firstItem="Fea-no-QZy" firstAttribute="centerX" secondItem="sda-wm-IT0" secondAttribute="centerX" id="ahj-D9-9fr"/>
-                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="height" secondItem="sda-wm-IT0" secondAttribute="width" multiplier="0.4" id="chP-wI-QAS"/>
+                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="height" secondItem="sda-wm-IT0" secondAttribute="width" multiplier="0.35" id="chP-wI-QAS"/>
+                            <constraint firstItem="w9h-h6-Y2t" firstAttribute="top" secondItem="LY6-eD-E1g" secondAttribute="bottom" constant="30" id="chu-h3-BJj"/>
+                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="centerX" secondItem="sda-wm-IT0" secondAttribute="centerX" id="d4v-ng-So2"/>
                             <constraint firstItem="LY6-eD-E1g" firstAttribute="height" secondItem="3K8-Z9-zJD" secondAttribute="height" id="iAm-yn-pUP"/>
-                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="width" secondItem="sda-wm-IT0" secondAttribute="width" multiplier="0.4" id="ixi-nh-orr"/>
+                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="width" secondItem="sda-wm-IT0" secondAttribute="width" multiplier="0.35" id="ixi-nh-orr"/>
                             <constraint firstItem="LY6-eD-E1g" firstAttribute="centerX" secondItem="sda-wm-IT0" secondAttribute="centerX" id="mLk-Wu-mI1"/>
-                            <constraint firstItem="Fea-no-QZy" firstAttribute="top" secondItem="3K8-Z9-zJD" secondAttribute="bottom" constant="20" id="mMi-qW-UBB"/>
                             <constraint firstItem="Fea-no-QZy" firstAttribute="centerY" secondItem="sda-wm-IT0" secondAttribute="centerY" id="moP-ny-daF"/>
-                            <constraint firstItem="3K8-Z9-zJD" firstAttribute="centerX" secondItem="sda-wm-IT0" secondAttribute="centerX" id="oT7-5I-cno"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="attemptsLabel" destination="oDq-pJ-wqx" id="8Ax-Cv-yPq"/>
                         <outlet property="averageTimeToCorrectLabel" destination="0Qa-cs-a9h" id="GOQ-Oo-jnj"/>
+                        <outlet property="homeButtonOutlet" destination="LY6-eD-E1g" id="mhl-cM-SSS"/>
                         <outlet property="totalCorrect" destination="PVU-Qf-fpY" id="0Oy-n9-Ce2"/>
+                        <outlet property="wtImageView" destination="3K8-Z9-zJD" id="cXH-Cu-iGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paY-F2-E3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,7 +377,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o5F-Ws-PKu" userLabel="Employee Info Stack View">
-                                <rect key="frame" x="166" y="399.5" width="42" height="51"/>
+                                <rect key="frame" x="166.5" y="399.5" width="42" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0z-oW-ea2">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>

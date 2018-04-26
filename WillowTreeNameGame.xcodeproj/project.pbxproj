@@ -24,6 +24,7 @@
 		C6C2F178208CFA0500C5DF1D /* NamesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */; };
 		C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */; };
 		C6DDBB8D208DF46100F4D3B8 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */; };
+		C6F9DD8320914BC100CD3CF6 /* HomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9DD8220914BC100CD3CF6 /* HomeScreenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataModel.swift; sourceTree = "<group>"; };
 		C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesDataStore.swift; sourceTree = "<group>"; };
 		C6DDBB8C208DF46100F4D3B8 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		C6F9DD8220914BC100CD3CF6 /* HomeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		CBE77A99C3214E0CA11F9DA2 /* Pods_WillowTreeNameGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B218F8A997F8FD9426FB80 /* Pods-WillowTreeNameGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillowTreeNameGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WillowTreeNameGame/Pods-WillowTreeNameGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F16130CC1166161997A4662E /* Pods_WillowTreeNameGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillowTreeNameGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 				C6C2F177208CFA0500C5DF1D /* NamesDataModel.swift */,
 				C6C2F179208D051F00C5DF1D /* NamesDataStore.swift */,
 				C6300E3B208FBCDA00539FF1 /* ScoreData.swift */,
+				C6F9DD8220914BC100CD3CF6 /* HomeScreenTableViewCell.swift */,
 			);
 			path = "Models and Data";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				C6300E3C208FBCDA00539FF1 /* ScoreData.swift in Sources */,
 				C6C2F17A208D051F00C5DF1D /* NamesDataStore.swift in Sources */,
 				C61B40D1208CE10D00AD03D9 /* NetworkRequests.swift in Sources */,
+				C6F9DD8320914BC100CD3CF6 /* HomeScreenTableViewCell.swift in Sources */,
 				C6537ECB2090BE8E00DF075F /* GameSummaryViewController.swift in Sources */,
 				C61B40C4208CDC0700AD03D9 /* FaceButton.swift in Sources */,
 				C6DDBB8D208DF46100F4D3B8 /* HomeScreenViewController.swift in Sources */,

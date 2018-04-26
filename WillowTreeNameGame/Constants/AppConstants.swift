@@ -21,6 +21,7 @@ struct AppConstants {
     static let feedbackPopupVC = "FeedbackPopupVC"
     static let gameSummaryVC = "GameSummaryVC"
     static let feedbackContinueButtonTitle = "Continue"
+    static let gameCellIdentifier = "gameCell"
     static let willowTreeColor = UIColor(red: 100/255, green: 214/255, blue: 196/255, alpha: 1.0)
     
 }

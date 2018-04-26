@@ -12,8 +12,8 @@ import GameplayKit
 protocol NameGameDelegate: class {
     func startGame(with gameData : (selectedNamesArray : [NamesDataModel], correctAnswer : Int), gameType : GameType)
 }
-enum GameType {
-    case normal, matt, teams
+enum GameType : Int {
+    case normal = 0, matt, teams
 }
 class NameGame {
     // TODO: - what is this for?
