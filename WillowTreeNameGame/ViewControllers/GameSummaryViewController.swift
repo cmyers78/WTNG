@@ -23,14 +23,15 @@ class GameSummaryViewController: UIViewController {
         let timeDifferenceSum = scoreDataArray?.reduce(0, { val1, val2 in
             (val1) + (val2.timeToCorrect - val2.timeStarted)
         }) ?? 0
-        return timeDifferenceSum / Double(scoreDataArray?.count ?? 1)
+
+        return (timeDifferenceSum / Double(scoreDataArray?.count ?? 1))
     }
     
-    private var numberOfAttemptsPerGame : Int {
+    private var numberOfAttemptsPerGame : Double {
         let totalAttempts = scoreDataArray?.reduce(0, { initial, scoreData in
             initial + scoreData.attempts
         }) ?? 0
-        return (totalAttempts / (scoreDataArray?.count ?? 1))
+        return Double(totalAttempts / (scoreDataArray?.count ?? 1))
     }
     
     private var totalCorrectGames : Int {
@@ -49,8 +50,8 @@ class GameSummaryViewController: UIViewController {
     }
     
     private func setSummaryLabels() {
-        averageTimeToCorrectLabel.text = "Avg. time to correct: \(timeToCorrect)"
-        attemptsLabel.text = "Avg. attempts per round: \(numberOfAttemptsPerGame)"
+        averageTimeToCorrectLabel.text = "Avg. time to correct: " + String(format: "%.3f", timeToCorrect)
+        attemptsLabel.text = "Avg. attempts per round: " + String(format: "%.3f", numberOfAttemptsPerGame)
         totalCorrect.text = "Total Correct Names: \(totalCorrectGames)"
     }
 

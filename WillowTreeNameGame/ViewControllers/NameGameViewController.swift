@@ -85,6 +85,7 @@ class NameGameViewController: UIViewController {
                 button.layer.borderColor = UIColor.black.cgColor
             }
             completion(sv)
+
     }
     private func configureSubviews(_ orientation: UIDeviceOrientation) {
         if orientation.isLandscape {
@@ -132,7 +133,10 @@ extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
         print("Game Started")
         configureFaces(from: gameData.selectedNamesArray) {
             view in
-            UIViewController.removeSpinner(spinner: view)
+            // I know this is probably a horrible hack, but I could not find another way to implement it.
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                UIViewController.removeSpinner(spinner: view)
+                }
         }
         let correctUser = gameData.selectedNamesArray[gameData.correctAnswer]
         questionLabel.text = "Who is \(correctUser.fullName())"
@@ -157,10 +161,8 @@ extension UIViewController {
     
     class func removeSpinner(spinner : UIView) {
         DispatchQueue.main.async {
-            print("Removing")
             spinner.removeFromSuperview()
             
         }
     }
 }
-

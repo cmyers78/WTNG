@@ -12,10 +12,9 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let gameChoicesDict = [ 0 : (title: "Normal Mode", description: "This mode will use all current and former Willow Tree employees"), 1 : (title : "Mat(t) Mode" , description: "This mode will use only the employees named Matt"), 2 : (title: "Team Mode", description: "This mode will only use current Willow Tree employees")]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = (tableView.frame.height * 0.33)
         NetworkRequests().loadNamesFromNetwork()
         print("grab names from db")
         tableView.delegate = self
@@ -33,12 +32,12 @@ class HomeScreenViewController: UIViewController {
 
 extension HomeScreenViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameChoicesDict.count
+        return AppConstants.gameChoicesDict.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.gameCellIdentifier, for: indexPath) as! HomeScreenTableViewCell
-        let game = gameChoicesDict[indexPath.row]
+        let game = AppConstants.gameChoicesDict[indexPath.row]
         
         cell.gameNameLabel.text = "\(game?.title ?? "No Title Available") - \(game?.description ?? "No Description Available")"
         

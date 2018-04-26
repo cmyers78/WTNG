@@ -30,25 +30,32 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-B5-hGh">
+                                <rect key="frame" x="16" y="81.5" width="343" height="5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="kXD-cP-Q9t"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-J1-zXE">
-                                <rect key="frame" x="0.0" y="233.5" width="375" height="433.5"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="126" id="yuu-le-eAr" customClass="HomeScreenTableViewCell" customModule="WillowTreeNameGame" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="126"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" rowHeight="139" id="yuu-le-eAr" customClass="HomeScreenTableViewCell" customModule="WillowTreeNameGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yuu-le-eAr" id="Ioi-51-gQa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name Here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-mj-pr4">
-                                                    <rect key="frame" x="25" y="21" width="202.5" height="84"/>
+                                                    <rect key="frame" x="25" y="21" width="204" height="97"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WTPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-zq-Ob7">
-                                                    <rect key="frame" x="237.5" y="6" width="112.5" height="113"/>
+                                                    <rect key="frame" x="239" y="13.5" width="111" height="111.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -61,8 +68,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="width" secondItem="yuu-le-eAr" secondAttribute="width" multiplier="0.3" id="HwT-OS-LLf"/>
-                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="height" secondItem="yuu-le-eAr" secondAttribute="height" multiplier="0.9" id="akC-B5-YEd"/>
+                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="width" secondItem="yuu-le-eAr" secondAttribute="height" multiplier="0.8" id="HwT-OS-LLf"/>
+                                            <constraint firstItem="3cY-zq-Ob7" firstAttribute="height" secondItem="yuu-le-eAr" secondAttribute="height" multiplier="0.8" id="akC-B5-YEd"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="gameImage" destination="3cY-zq-Ob7" id="qld-m4-oGM"/>
@@ -72,7 +79,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be shown photos of Willow Tree employees. Try and match the name to the photo! Select your game mode below." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc1-Np-3Id">
-                                <rect key="frame" x="10" y="86.5" width="355" height="64.5"/>
+                                <rect key="frame" x="10" y="107" width="355" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -82,13 +89,16 @@
                         <constraints>
                             <constraint firstItem="3DM-J1-zXE" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="06W-cy-ClR"/>
                             <constraint firstAttribute="trailing" secondItem="rc1-Np-3Id" secondAttribute="trailing" constant="10" id="6gu-EH-jJI"/>
+                            <constraint firstItem="R4V-B5-hGh" firstAttribute="trailing" secondItem="J8y-D1-tr9" secondAttribute="trailingMargin" id="ABF-e1-1kS"/>
                             <constraint firstItem="E4P-Fy-1Vi" firstAttribute="top" secondItem="3DM-J1-zXE" secondAttribute="bottom" id="AIu-OK-2o3"/>
-                            <constraint firstItem="rc1-Np-3Id" firstAttribute="top" secondItem="hBf-RI-k9p" secondAttribute="bottom" constant="10" id="EUt-vb-YVa"/>
+                            <constraint firstItem="R4V-B5-hGh" firstAttribute="leading" secondItem="J8y-D1-tr9" secondAttribute="leadingMargin" id="HGf-8X-Mwy"/>
+                            <constraint firstItem="rc1-Np-3Id" firstAttribute="top" secondItem="R4V-B5-hGh" secondAttribute="bottom" constant="20" id="HZT-Co-VIM"/>
                             <constraint firstItem="rc1-Np-3Id" firstAttribute="leading" secondItem="J8y-D1-tr9" secondAttribute="leading" constant="10" id="HzS-gV-Ctb"/>
                             <constraint firstItem="hBf-RI-k9p" firstAttribute="top" secondItem="ayb-Su-axt" secondAttribute="bottom" constant="25" id="Ocp-cE-WTe"/>
+                            <constraint firstItem="hBf-RI-k9p" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="fFN-of-GCK"/>
                             <constraint firstItem="3DM-J1-zXE" firstAttribute="width" secondItem="J8y-D1-tr9" secondAttribute="width" id="fOa-lT-9MJ"/>
-                            <constraint firstItem="hBf-RI-k9p" firstAttribute="centerX" secondItem="J8y-D1-tr9" secondAttribute="centerX" id="ggd-Tj-wk8"/>
-                            <constraint firstItem="3DM-J1-zXE" firstAttribute="height" secondItem="J8y-D1-tr9" secondAttribute="height" multiplier="0.65" id="jpK-Iu-N9z"/>
+                            <constraint firstItem="3DM-J1-zXE" firstAttribute="height" secondItem="J8y-D1-tr9" secondAttribute="height" multiplier="0.7" id="jpK-Iu-N9z"/>
+                            <constraint firstItem="R4V-B5-hGh" firstAttribute="top" secondItem="hBf-RI-k9p" secondAttribute="bottom" constant="5" id="lCY-Kl-2UB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea9-73-KRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.20000000000005" y="435.83208395802103"/>
+            <point key="canvasLocation" x="-959.20000000000005" y="421.43928035982015"/>
         </scene>
         <!--Name Game View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -228,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="423"/>
+            <point key="canvasLocation" x="-183" y="421"/>
         </scene>
         <!--Game Summary View Controller-->
         <scene sceneID="9ms-V2-tWK">
