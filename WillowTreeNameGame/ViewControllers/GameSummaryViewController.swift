@@ -51,7 +51,7 @@ class GameSummaryViewController: UIViewController {
     
     private func setSummaryLabels() {
         averageTimeToCorrectLabel.text = "Avg. time to correct: " + String(format: "%.3f", timeToCorrect)
-        attemptsLabel.text = "Avg. attempts per round: " + String(format: "%.3f", numberOfAttemptsPerGame)
+        attemptsLabel.text = "Avg. attempts per round: " + String(format: "%.2f", numberOfAttemptsPerGame)
         totalCorrect.text = "Total Correct Names: \(totalCorrectGames)"
     }
 

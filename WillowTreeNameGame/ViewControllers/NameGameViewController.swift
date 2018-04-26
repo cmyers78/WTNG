@@ -59,6 +59,7 @@ class NameGameViewController: UIViewController {
         var isCorrect = false
         
         if button.tag == correctAnswer {
+            scoreData?.attempts += 1
             scoreData?.foundCorrectName = true
             isCorrect = true
             scoreData?.timeToCorrect = Date().timeIntervalSince1970
@@ -134,7 +135,7 @@ extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
         configureFaces(from: gameData.selectedNamesArray) {
             view in
             // I know this is probably a horrible hack, but I could not find another way to implement it.
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.25) {
                 UIViewController.removeSpinner(spinner: view)
                 }
         }
