@@ -56,7 +56,7 @@ class GameSummaryViewController: UIViewController {
     }
 
     @IBAction func homeTapped(_ sender: UIButton) {
-        let homeVC = storyboard?.instantiateInitialViewController() as! HomeScreenViewController
+        guard let homeVC = storyboard?.instantiateInitialViewController() as? HomeScreenViewController else { return }
         present(homeVC, animated: true)
     }
 }

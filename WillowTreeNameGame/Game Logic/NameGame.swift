@@ -32,8 +32,8 @@ class NameGame {
             modelData = NamesDataStore().getNamesData(forGame: .teams)
         }
         
-        modelData = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: modelData) as! [NamesDataModel]
-        let modelSlice = Array(modelData[0...5])
+        guard let shuffledData = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: modelData) as? [NamesDataModel] else { return }
+        let modelSlice = Array(shuffledData[0...5])
         let correctAnswer = GKRandomSource.sharedRandom().nextInt(upperBound: numberPeople)
         self.delegate?.startGame(with: (modelSlice, correctAnswer), gameType: withFilter)
     }
