@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode9
+
+script:
+ - xcodebuild test - project WillowTreeNameGame/WillowTreeNameGame.xcworkspace -scheme WillowTreeNameGame -destination "platform=iOS Simulator,name=iPhone 7" -sdk iphonesimulator11.0 CODE_SIGNING_REQUIRED=NO
+ 
