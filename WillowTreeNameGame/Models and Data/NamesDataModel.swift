@@ -9,17 +9,17 @@
 import Foundation
 import RealmSwift
 
-class NamesDataModel : Object {
+class NamesDataModel: Object {
     
-    @objc dynamic var id : String?
-    @objc dynamic var firstName : String?
-    @objc dynamic var lastName : String?
-    @objc dynamic var jobTitle : String?
-    @objc dynamic var headShotURL : String?   // "headshot" is dict keyword, "url" is key for string rep of url
+    @objc dynamic var id: String?
+    @objc dynamic var firstName: String?
+    @objc dynamic var lastName: String?
+    @objc dynamic var jobTitle: String?
+    @objc dynamic var headShotURL: String?   // "headshot" is dict keyword, "url" is key for string rep of url
 }
 
 extension NamesDataModel {
-    convenience init(jsonArray : JSONArray) {
+    convenience init(jsonArray: JSONArray) {
         self.init()
 
         for item in jsonArray {

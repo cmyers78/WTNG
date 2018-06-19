@@ -13,8 +13,7 @@ class NetworkRequests {
     let opQueue = OperationQueue.main
     func loadNamesFromNetwork() {
         if let url = URL(string: AppConstants.namesURL) {
-            let task = URLSession.shared.dataTask(with: url) {
-                (data, response, error) in
+            let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
                 if error != nil {
                     // return failure(error) enum
                 }
@@ -36,8 +35,8 @@ class NetworkRequests {
     }
     
     // was private...took it off to test
-     func parseJSON(from data : Data?) -> JSONArray? {
-        var namesDataArray : JSONArray? = nil
+     func parseJSON(from data: Data?) -> JSONArray? {
+        var namesDataArray: JSONArray? = nil
         
         if let namesData = data {
             do {

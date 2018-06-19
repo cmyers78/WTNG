@@ -11,9 +11,9 @@ import RealmSwift
 
 class NamesDataStore {
     
-    func saveNamesData(withName namesDataArray : [NamesDataModel]) {
+    func saveNamesData(withName namesDataArray: [NamesDataModel]) {
         let configuration = Realm.Configuration(encryptionKey: getKey())
-        let realm = try! Realm(configuration: configuration)
+        let realm = try! Realm(configuration: configuration) // swiftlint:disable:this force_try
         
         // check to see if current dataStore count is the same as incoming JSON, if not, filter through the incoming json
         // to find unique names and add to array
@@ -31,15 +31,16 @@ class NamesDataStore {
             let filteredForDuplicates = namesDataArray.filter { getNamesData(forGame: .normal).contains($0) == false }
             print("new data. write transaction")
             print("filteredDataCount = \(filteredForDuplicates.count)")
+            // swiftlint:disable:next force_try
             try! realm.write {
                 realm.add(filteredForDuplicates)
             }
         }
     }
     
-    func getNamesData(forGame : GameType ) -> [NamesDataModel] {
+    func getNamesData(forGame: GameType ) -> [NamesDataModel] {
         let configuration = Realm.Configuration(encryptionKey: getKey())
-        let decryptNames = try! Realm(configuration: configuration)
+        let decryptNames = try! Realm(configuration: configuration) // swiftlint:disable:this force_try
         var filtered = [NamesDataModel]()
         switch forGame {
         case .normal:
@@ -72,7 +73,7 @@ class NamesDataStore {
         var dataTypeRef: AnyObject?
         var status = withUnsafeMutablePointer(to: &dataTypeRef) { SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0)) }
         if status == errSecSuccess {
-            return (dataTypeRef as! NSData) as Data
+            return (dataTypeRef as! NSData) as Data // swiftlint:disable:this force_cast
         }
 
         // No pre-existing key from this application, so generate a new one

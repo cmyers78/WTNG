@@ -10,8 +10,8 @@ import XCTest
 @testable import WillowTreeNameGame
 
 class WillowTreeNameGameTests: XCTestCase {
-    var wtDataModel : NamesDataModel!
-    var networkRequests : NetworkRequests!
+    var wtDataModel: NamesDataModel!
+    var networkRequests: NetworkRequests!
     let jsonArray = """
 [{
         "id": "4NCJTL13UkK0qEIAAcg4IQ",

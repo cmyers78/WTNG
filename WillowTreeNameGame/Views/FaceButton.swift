@@ -38,12 +38,10 @@ open class FaceButton: UIButton {
         tintView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tintView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
-
-    // TODO: Show the user's face on the button.
 }
 
 extension FaceButton {
-    func convertURLToImage(urlString : String, completion: @escaping (UIImage) -> Void) {
+    func convertURLToImage(urlString: String, completion: @escaping (UIImage) -> Void) {
         DispatchQueue.global().async {
             guard let url = URL(string: urlString) else { return }
             guard let data = try? Data(contentsOf: url) else { return }

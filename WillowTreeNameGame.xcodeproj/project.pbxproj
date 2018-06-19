@@ -241,6 +241,7 @@
 				C6812167208A3B9C00DC7B3F /* Frameworks */,
 				C6812168208A3B9C00DC7B3F /* Resources */,
 				A4DFAC64EDF0D54876C953C6 /* [CP] Embed Pods Frameworks */,
+				C6884C4B20D92CB100B7B67E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -365,6 +366,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WillowTreeNameGame/Pods-WillowTreeNameGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C6884C4B20D92CB100B7B67E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: Swiftlint not installed. download from https://github.com/realm/SwiftLint\"\nfi ";
 		};
 /* End PBXShellScriptBuildPhase section */
 

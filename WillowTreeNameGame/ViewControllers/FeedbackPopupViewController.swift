@@ -8,13 +8,12 @@
 
 import UIKit
 
-protocol FeedbackPopupDelegate {
-    func continueGame(buttonSelected : String?, isCorrect : Bool?)
+protocol FeedbackPopupDelegate: class {
+    func continueGame(buttonSelected: String?, isCorrect: Bool?)
     func endGame()
 }
 
 class FeedbackPopupViewController: UIViewController {
-
 
     @IBOutlet weak var viewBox: UIView!
     @IBOutlet weak var feedbackLabel: UILabel!
@@ -22,11 +21,11 @@ class FeedbackPopupViewController: UIViewController {
     @IBOutlet weak var employeeNameLabel: UILabel!
     @IBOutlet weak var employeeTitleLabel: UILabel!
     
-    var popupDelegate : FeedbackPopupDelegate?
-    var nameGameDelegate : NameGameDelegate?
-    var nameSelected : NamesDataModel?
-    var nameSelectedImage : UIImage?
-    var isCorrect : Bool?
+    weak var popupDelegate: FeedbackPopupDelegate?
+    weak var nameGameDelegate: NameGameDelegate?
+    var nameSelected: NamesDataModel?
+    var nameSelectedImage: UIImage?
+    var isCorrect: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +36,7 @@ class FeedbackPopupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func injectUserData(namesData : NamesDataModel, userImage : UIImage, isCorrect : Bool) {
+    func injectUserData(namesData: NamesDataModel, userImage: UIImage, isCorrect: Bool) {
         self.nameSelected = namesData
         self.nameSelectedImage = userImage
         self.isCorrect = isCorrect

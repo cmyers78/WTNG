@@ -10,19 +10,18 @@ import Foundation
 import GameplayKit
 
 protocol NameGameDelegate: class {
-    func startGame(with gameData : (selectedNamesArray : [NamesDataModel], correctAnswer : Int), gameType : GameType)
+    func startGame(with gameData: (selectedNamesArray: [NamesDataModel], correctAnswer: Int), gameType: GameType)
 }
-enum GameType : Int {
+enum GameType: Int {
     case normal = 0, matt, teams
 }
 class NameGame {
-    // TODO: - what is this for?
-    //var stringArray = [String]()
+
     weak var delegate: NameGameDelegate?
 
     let numberPeople = 6
     
-    func generateNamesArray(withFilter : GameType) {
+    func generateNamesArray(withFilter: GameType) {
         var modelData = [NamesDataModel]()
         switch withFilter {
         case .normal:

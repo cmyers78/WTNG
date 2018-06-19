@@ -17,10 +17,10 @@ class GameSummaryViewController: UIViewController {
     @IBOutlet weak var averageTimeToCorrectLabel: UILabel!
     @IBOutlet weak var totalCorrect: UILabel!
     
-    var scoreDataArray : [ScoreData]?
+    var scoreDataArray: [ScoreData]?
     
     // Computed vars for data summary display
-    private var timeToCorrect : Double {
+    private var timeToCorrect: Double {
         let timeDifferenceSum = scoreDataArray?.reduce(0, { val1, val2 in
             (val1) + (val2.timeToCorrect - val2.timeStarted)
         }) ?? 0
@@ -28,14 +28,14 @@ class GameSummaryViewController: UIViewController {
         return timeDiff > 0 ? timeDiff : 0
     }
     
-    private var numberOfAttemptsPerGame : Double {
+    private var numberOfAttemptsPerGame: Double {
         let totalAttempts = scoreDataArray?.reduce(0, { initial, scoreData in
             initial + scoreData.attempts
         }) ?? 0
         return Double(totalAttempts / (scoreDataArray?.count ?? 1))
     }
     
-    private var totalCorrectGames : Int {
+    private var totalCorrectGames: Int {
         return scoreDataArray?.filter { $0.foundCorrectName == true }.count ?? 0
     }
     
@@ -45,7 +45,7 @@ class GameSummaryViewController: UIViewController {
         setSummaryLabels()
         
     }
-    func injectScoreData(scoreDataArray : [ScoreData]) {
+    func injectScoreData(scoreDataArray: [ScoreData]) {
         self.scoreDataArray = scoreDataArray
     }
     

@@ -23,14 +23,14 @@ class HomeScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func start(forGameType : GameType) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "NameGameVC") as! NameGameViewController
-        vc.setGameGenerator(with: NameGame(), forGameType: forGameType, scoreData: ScoreData())
-        present(vc, animated: true)
+    func start(forGameType: GameType) {
+        if let nameGameVC = storyboard?.instantiateViewController(withIdentifier: "NameGameVC") as? NameGameViewController {
+            nameGameVC.setGameGenerator(with: NameGame(), forGameType: forGameType, scoreData: ScoreData())
+            present(nameGameVC, animated: true)}
     }
 }
 
-extension HomeScreenViewController : UITableViewDelegate, UITableViewDataSource {
+extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppConstants.gameChoicesDict.count
     }

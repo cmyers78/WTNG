@@ -17,9 +17,9 @@ class NameGameViewController: UIViewController {
     @IBOutlet var imageButtons: [FaceButton]!
    
     // injected properties
-    var scoreData : ScoreData?
-    var nameGame : NameGame?
-    var gameTypeSelected : GameType?
+    var scoreData: ScoreData?
+    var nameGame: NameGame?
+    var gameTypeSelected: GameType?
     
     // local storage of generated data
     var scoreDataArray = [ScoreData?]()
@@ -39,14 +39,14 @@ class NameGameViewController: UIViewController {
         configureSubviews(orientation)
     }
     
-    func setGameGenerator(with nameGame : NameGame, forGameType : GameType, scoreData : ScoreData) {
+    func setGameGenerator(with nameGame: NameGame, forGameType: GameType, scoreData: ScoreData) {
         self.nameGame = nameGame
         self.scoreData = scoreData
         nameGame.delegate = self
         nameGame.generateNamesArray(withFilter: forGameType)
     }
     
-    func obtainFeedback(namesData : NamesDataModel, userImage : UIImage, correctAnswer : Bool) {
+    func obtainFeedback(namesData: NamesDataModel, userImage: UIImage, correctAnswer: Bool) {
         let popupVC = storyboard?.instantiateViewController(withIdentifier: AppConstants.feedbackPopupVC) as! FeedbackPopupViewController
         popupVC.injectUserData(namesData: namesData, userImage: userImage, isCorrect: correctAnswer)
         popupVC.popupDelegate = self
@@ -70,9 +70,8 @@ class NameGameViewController: UIViewController {
         
     }
     
-    
-    // MARK : - Setup Views
-    private func configureFaces(from arrayModel : [NamesDataModel], completion: @escaping (UIView) -> Void) {
+    // MARK: - Setup Views
+    private func configureFaces(from arrayModel: [NamesDataModel], completion: @escaping (UIView) -> Void) {
         let sv = UIViewController.displaySpinner(onView: self.view)
             for (idx, button) in self.imageButtons.enumerated() {
                 
@@ -108,7 +107,7 @@ class NameGameViewController: UIViewController {
 }
 
 // MARK: - Protocol Extensions
-extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
+extension NameGameViewController: NameGameDelegate, FeedbackPopupDelegate {
     func endGame() {
         scoreDataArray.append(scoreData)
         let summaryVC = storyboard?.instantiateViewController(withIdentifier: AppConstants.gameSummaryVC) as! GameSummaryViewController
@@ -117,7 +116,7 @@ extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
     }
     
     func continueGame(buttonSelected: String?, isCorrect: Bool?) {
-        var continueGame : Bool {
+        var continueGame: Bool {
             return buttonSelected == AppConstants.feedbackContinueButtonTitle
         }
         guard let isCorrect = isCorrect else { return }
@@ -127,13 +126,12 @@ extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
         }
     }
     
-    func startGame(with gameData: (selectedNamesArray: [NamesDataModel], correctAnswer: Int), gameType : GameType) {
+    func startGame(with gameData: (selectedNamesArray: [NamesDataModel], correctAnswer: Int), gameType: GameType) {
         correctAnswer = gameData.correctAnswer
         selectedNames = gameData.selectedNamesArray
         gameTypeSelected = gameType
         print("Game Started")
-        configureFaces(from: gameData.selectedNamesArray) {
-            view in
+        configureFaces(from: gameData.selectedNamesArray) { view in
             // I know this is probably a horrible hack, but I could not find another way to implement it.
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.25) {
                 UIViewController.removeSpinner(spinner: view)
@@ -146,7 +144,7 @@ extension NameGameViewController : NameGameDelegate, FeedbackPopupDelegate {
 }
 
 extension UIViewController {
-    class func displaySpinner(onView : UIView) -> UIView {
+    class func displaySpinner(onView: UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = AppConstants.willowTreeColor
         let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
@@ -160,7 +158,7 @@ extension UIViewController {
         return spinnerView
     }
     
-    class func removeSpinner(spinner : UIView) {
+    class func removeSpinner(spinner: UIView) {
         DispatchQueue.main.async {
             spinner.removeFromSuperview()
             

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // Type Aliases
-typealias JSONDictionary = [String : AnyObject]
+typealias JSONDictionary = [String: AnyObject]
 typealias JSONArray = [JSONDictionary]
 
 // Constants
@@ -23,5 +23,5 @@ struct AppConstants {
     static let feedbackContinueButtonTitle = "Continue"
     static let gameCellIdentifier = "gameCell"
     static let willowTreeColor = UIColor(red: 100/255, green: 214/255, blue: 196/255, alpha: 1.0)
-    static let gameChoicesDict = [ 0 : (title: "Normal Mode", description: "This mode will use all current and former Willow Tree employees.", image : #imageLiteral(resourceName: "normalMode")), 1 : (title : "Mat(t) Mode" , description: "This mode will use only the employees named Mat, Matt, Matthew...you get the idea!", image : #imageLiteral(resourceName: "mattMode")), 2 : (title: "Team Mode", description: "This mode will only use current Willow Tree employees.", image : #imageLiteral(resourceName: "teamsMode"))]
+    static let gameChoicesDict = [ 0: (title: "Normal Mode", description: "This mode will use all current and former Willow Tree employees.", image : #imageLiteral(resourceName: "normalMode")), 1: (title : "Mat(t) Mode", description: "This mode will use only the employees named Mat, Matt, Matthew...you get the idea!", image : #imageLiteral(resourceName: "mattMode")), 2: (title: "Team Mode", description: "This mode will only use current Willow Tree employees.", image : #imageLiteral(resourceName: "teamsMode"))]
 }
